@@ -1,0 +1,170 @@
+/* Variáveis para suporte a temas (Claro / Escuro) */
+:root {
+    --bg-color: #f4f6f9;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --primary-color: #0066cc;
+    --secondary-color: #666666;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --primary-color: #4da6ff;
+    --secondary-color: #aaa;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Botão de Tema */
+.btn-theme {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: var(--shadow);
+}
+
+.btn-theme:hover {
+    opacity: 0.9;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+}
+
+.profile-img {
+    width: 130px;
+    height: 130;
+    border-radius: 10%;
+    object-fit: cover;
+    border: 3px solid var(---primary-color);
+    margin: 15px auto;
+    display: block;
+    box-shadow: var(--shadow);
+}
+
+.header h2 {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.contact {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Cards de Seção */
+.card {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.item {
+    margin-bottom: 15px;
+}
+
+.item:last-child {
+    margin-bottom: 0;
+}
+
+.item h4 {
+    font-size: 1.1rem;
+}
+
+.date {
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Lista de Habilidades */
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-list li {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .btn-theme {
+        position: static;
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
